@@ -31,14 +31,14 @@ jobs:
           password: ${{ secrets.MAIL_PASS }}
           from: SysACS CI <mobilityai@syswin.co.kr>
           to: ${{ steps.setup.outputs.to }}
-          subject: "[ACS] ${{ steps.setup.outputs.label }} ${{ github.event.release.name }} 배포 안내"
+          subject: "[ACSMon] ${{ steps.setup.outputs.label }} ${{ github.event.release.name }} 배포 안내"
           html_body: |
             <!DOCTYPE html>
             <html lang="ko">
             <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>ACS 배포 안내</title>
+              <title>ACSMon 배포 안내</title>
             </head>
             <body style="margin:0; padding:0; background-color:#f4f6f8; font-family:'Malgun Gothic','Apple SD Gothic Neo','Segoe UI',sans-serif;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f6f8;">
@@ -47,15 +47,15 @@ jobs:
                     <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; border-radius:8px; overflow:hidden; max-width:600px;">
                       <tr>
                         <td style="background-color:#1f2937; padding:28px 32px;">
-                          <div style="font-size:12px; color:#9ca3af; letter-spacing:1.5px; font-weight:600;">ACS RELEASE</div>
+                          <div style="font-size:12px; color:#9ca3af; letter-spacing:1.5px; font-weight:600;">ACSMon RELEASE</div>
                           <div style="margin-top:6px; font-size:22px; color:#ffffff; font-weight:700;">${{ steps.setup.outputs.label }} 배포 안내</div>
                         </td>
                       </tr>
                       <tr>
                         <td style="padding:32px;">
-                          <p style="margin:0 0 14px; font-size:15px; color:#374151; line-height:1.6;">안녕하세요.</p>
+                          <p style="margin:0 0 14px; font-size:15px; color:#374151; line-height:1.6;">안녕하세요 시스윈 모빌리티 ACS팀 입니다.</p>
                           <p style="margin:0 0 28px; font-size:15px; color:#374151; line-height:1.6;">
-                            ACS <strong style="color:#111827;">${{ github.event.release.name }}</strong> ${{ steps.setup.outputs.intro }}.
+                            ACSMon Install <strong style="color:#111827;">${{ github.event.release.name }}</strong> ${{ steps.setup.outputs.intro }}.
                           </p>
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
                             <tr>
@@ -84,8 +84,8 @@ jobs:
                       <tr>
                         <td style="background-color:#f9fafb; padding:18px 32px; border-top:1px solid #e5e7eb;">
                           <p style="margin:0; font-size:12px; color:#9ca3af; line-height:1.6;">
-                            본 메일은 ACS 자동 배포 시스템에서 발송된 안내 메일입니다.<br>
-                            문의사항은 SysACS 담당자에게 연락 부탁드립니다.
+                            본 메일은 ACSMon 자동 배포 시스템에서 발송된 안내 메일입니다.<br>
+                            문의사항은 시스윈 모빌리티 ACS팀 담당자에게 연락 부탁드립니다.
                           </p>
                         </td>
                       </tr>
