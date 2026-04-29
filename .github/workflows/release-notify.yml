@@ -12,7 +12,7 @@ jobs:
         id: setup
         run: |
           if [ "${{ github.event.release.prerelease }}" = "false" ]; then
-            echo "to=acs@syswin.co.kr, swmobi@syswin.co.kr" >> $GITHUB_OUTPUT
+            echo "to=swmobi@syswin.co.kr" >> $GITHUB_OUTPUT
             echo "label=신규 버전" >> $GITHUB_OUTPUT
             echo "intro=정식 버전이 배포되었습니다" >> $GITHUB_OUTPUT
           else
