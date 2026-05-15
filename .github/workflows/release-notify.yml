@@ -16,7 +16,7 @@ jobs:
             echo "label=신규 버전" >> $GITHUB_OUTPUT
             echo "intro=정식 버전이 배포되었습니다" >> $GITHUB_OUTPUT
           else
-            echo "to=acs@syswin.co.kr,amr@syswin.co.kr" >> $GITHUB_OUTPUT
+            echo "to=acs@syswin.co.kr,amr@syswin.co.kr,ssgt@syswin.co.kr" >> $GITHUB_OUTPUT
             echo "label=테스트 버전" >> $GITHUB_OUTPUT
             echo "intro=새로운 테스트 버전이 배포되었습니다" >> $GITHUB_OUTPUT
           fi
